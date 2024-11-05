@@ -12,6 +12,7 @@ namespace Student_Management_System_using_Windows_Forms_LLG
         /// The main entry point for the application.
         /// </summary>
         /// comm
+        /// //lerato
         [STAThread]
         static void Main()
         {
