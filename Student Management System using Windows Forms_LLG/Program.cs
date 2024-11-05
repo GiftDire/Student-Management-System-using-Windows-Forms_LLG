@@ -13,6 +13,7 @@ namespace Student_Management_System_using_Windows_Forms_LLG
         /// </summary>
         /// comm
         /// //lerato
+        //erty
         [STAThread]
         static void Main()
         {
