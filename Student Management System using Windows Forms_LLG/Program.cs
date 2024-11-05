@@ -11,6 +11,7 @@ namespace Student_Management_System_using_Windows_Forms_LLG
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
+        /// comm
         [STAThread]
         static void Main()
         {
