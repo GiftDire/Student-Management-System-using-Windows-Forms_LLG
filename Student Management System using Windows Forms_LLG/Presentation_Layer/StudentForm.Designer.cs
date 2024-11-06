@@ -63,6 +63,7 @@
             this.btnViewStudents.TabIndex = 1;
             this.btnViewStudents.Text = "View All Student";
             this.btnViewStudents.UseVisualStyleBackColor = true;
+            this.btnViewStudents.Click += new System.EventHandler(this.btnViewStudents_Click);
             // 
             // btnUpdateStudent
             // 
@@ -158,11 +159,11 @@
             // dgvdisplay
             // 
             this.dgvdisplay.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvdisplay.Location = new System.Drawing.Point(720, 77);
+            this.dgvdisplay.Location = new System.Drawing.Point(670, 77);
             this.dgvdisplay.Name = "dgvdisplay";
             this.dgvdisplay.RowHeadersWidth = 51;
             this.dgvdisplay.RowTemplate.Height = 24;
-            this.dgvdisplay.Size = new System.Drawing.Size(408, 182);
+            this.dgvdisplay.Size = new System.Drawing.Size(458, 182);
             this.dgvdisplay.TabIndex = 13;
             // 
             // StudentForm

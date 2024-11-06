@@ -16,7 +16,7 @@ namespace Student_Management_System_using_Windows_Forms_LLG.Business_Logic_Layer
         {
             studentlist.Add(student);
 
-            string filepath = @"C:\Users\direo\OneDrive\Desktop\Students";
+            string filepath = @"C:\Users\direo\OneDrive\Desktop\Students.txt";
 
             using (StreamWriter writer = new StreamWriter(filepath, append: true))
             {

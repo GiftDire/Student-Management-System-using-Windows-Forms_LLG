@@ -9,12 +9,17 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using Student_Management_System_using_Windows_Forms_LLG.Business_Logic_Layer;
+using Student_Management_System_using_Windows_Forms_LLG.Data_Layer;
+using System.IO;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using System.Xml.Linq;
 
 namespace Student_Management_System_using_Windows_Forms_LLG.Presentation_Layer
 {
     public partial class StudentForm : Form
     {
         DataHandler hl = new DataHandler();
+        FileHandler FL = new FileHandler();
         public StudentForm()
         {
             InitializeComponent();
@@ -49,6 +54,22 @@ namespace Student_Management_System_using_Windows_Forms_LLG.Presentation_Layer
 
 
             
+        }
+
+        private void btnViewStudents_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                
+                List<Student> students = FL.ReadStudents();
+
+             
+                dgvdisplay.DataSource = students;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }
