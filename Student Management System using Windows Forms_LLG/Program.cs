@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Student_Management_System_using_Windows_Forms_LLG.Presentation_Layer;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -19,7 +20,8 @@ namespace Student_Management_System_using_Windows_Forms_LLG
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            //  Application.Run(new Form1());
+            Application.Run(new StudentForm());
         }
     }
 }

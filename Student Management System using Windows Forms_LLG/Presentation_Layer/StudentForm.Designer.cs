@@ -28,68 +28,68 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.AddStudent = new System.Windows.Forms.Button();
-            this.ViewStudents = new System.Windows.Forms.Button();
-            this.UpdateStudent = new System.Windows.Forms.Button();
-            this.DeleteStudent = new System.Windows.Forms.Button();
-            this.GenerateReport = new System.Windows.Forms.Button();
+            this.BtnAddStudent = new System.Windows.Forms.Button();
+            this.btnViewStudents = new System.Windows.Forms.Button();
+            this.btnUpdateStudent = new System.Windows.Forms.Button();
+            this.btnDeleteStudent = new System.Windows.Forms.Button();
+            this.btnGenerateReport = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.textstudentID = new System.Windows.Forms.TextBox();
+            this.txtstudentname = new System.Windows.Forms.TextBox();
+            this.txtstudentage = new System.Windows.Forms.TextBox();
+            this.txtcourse = new System.Windows.Forms.TextBox();
+            this.dgvdisplay = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvdisplay)).BeginInit();
             this.SuspendLayout();
             // 
-            // AddStudent
+            // BtnAddStudent
             // 
-            this.AddStudent.Location = new System.Drawing.Point(135, 411);
-            this.AddStudent.Name = "AddStudent";
-            this.AddStudent.Size = new System.Drawing.Size(144, 23);
-            this.AddStudent.TabIndex = 0;
-            this.AddStudent.Text = "Add New Student";
-            this.AddStudent.UseVisualStyleBackColor = true;
-            this.AddStudent.Click += new System.EventHandler(this.AddStudent_Click);
+            this.BtnAddStudent.Location = new System.Drawing.Point(135, 411);
+            this.BtnAddStudent.Name = "BtnAddStudent";
+            this.BtnAddStudent.Size = new System.Drawing.Size(144, 23);
+            this.BtnAddStudent.TabIndex = 0;
+            this.BtnAddStudent.Text = "Add New Student";
+            this.BtnAddStudent.UseVisualStyleBackColor = true;
+            this.BtnAddStudent.Click += new System.EventHandler(this.AddStudent_Click);
             // 
-            // ViewStudents
+            // btnViewStudents
             // 
-            this.ViewStudents.Location = new System.Drawing.Point(341, 411);
-            this.ViewStudents.Name = "ViewStudents";
-            this.ViewStudents.Size = new System.Drawing.Size(147, 23);
-            this.ViewStudents.TabIndex = 1;
-            this.ViewStudents.Text = "View All Student";
-            this.ViewStudents.UseVisualStyleBackColor = true;
+            this.btnViewStudents.Location = new System.Drawing.Point(341, 411);
+            this.btnViewStudents.Name = "btnViewStudents";
+            this.btnViewStudents.Size = new System.Drawing.Size(147, 23);
+            this.btnViewStudents.TabIndex = 1;
+            this.btnViewStudents.Text = "View All Student";
+            this.btnViewStudents.UseVisualStyleBackColor = true;
             // 
-            // UpdateStudent
+            // btnUpdateStudent
             // 
-            this.UpdateStudent.Location = new System.Drawing.Point(547, 411);
-            this.UpdateStudent.Name = "UpdateStudent";
-            this.UpdateStudent.Size = new System.Drawing.Size(182, 23);
-            this.UpdateStudent.TabIndex = 2;
-            this.UpdateStudent.Text = "Update Student Info";
-            this.UpdateStudent.UseVisualStyleBackColor = true;
+            this.btnUpdateStudent.Location = new System.Drawing.Point(547, 411);
+            this.btnUpdateStudent.Name = "btnUpdateStudent";
+            this.btnUpdateStudent.Size = new System.Drawing.Size(182, 23);
+            this.btnUpdateStudent.TabIndex = 2;
+            this.btnUpdateStudent.Text = "Update Student Info";
+            this.btnUpdateStudent.UseVisualStyleBackColor = true;
             // 
-            // DeleteStudent
+            // btnDeleteStudent
             // 
-            this.DeleteStudent.Location = new System.Drawing.Point(774, 411);
-            this.DeleteStudent.Name = "DeleteStudent";
-            this.DeleteStudent.Size = new System.Drawing.Size(115, 23);
-            this.DeleteStudent.TabIndex = 3;
-            this.DeleteStudent.Text = "Delete Student";
-            this.DeleteStudent.UseVisualStyleBackColor = true;
+            this.btnDeleteStudent.Location = new System.Drawing.Point(774, 411);
+            this.btnDeleteStudent.Name = "btnDeleteStudent";
+            this.btnDeleteStudent.Size = new System.Drawing.Size(115, 23);
+            this.btnDeleteStudent.TabIndex = 3;
+            this.btnDeleteStudent.Text = "Delete Student";
+            this.btnDeleteStudent.UseVisualStyleBackColor = true;
             // 
-            // GenerateReport
+            // btnGenerateReport
             // 
-            this.GenerateReport.Location = new System.Drawing.Point(938, 411);
-            this.GenerateReport.Name = "GenerateReport";
-            this.GenerateReport.Size = new System.Drawing.Size(179, 23);
-            this.GenerateReport.TabIndex = 4;
-            this.GenerateReport.Text = "Generate Student Report";
-            this.GenerateReport.UseVisualStyleBackColor = true;
+            this.btnGenerateReport.Location = new System.Drawing.Point(938, 411);
+            this.btnGenerateReport.Name = "btnGenerateReport";
+            this.btnGenerateReport.Size = new System.Drawing.Size(179, 23);
+            this.btnGenerateReport.TabIndex = 4;
+            this.btnGenerateReport.Text = "Generate Student Report";
+            this.btnGenerateReport.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -127,66 +127,66 @@
             this.label4.TabIndex = 8;
             this.label4.Text = "Course:";
             // 
-            // textBox1
+            // textstudentID
             // 
-            this.textBox1.Location = new System.Drawing.Point(307, 70);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(285, 22);
-            this.textBox1.TabIndex = 9;
+            this.textstudentID.Location = new System.Drawing.Point(307, 70);
+            this.textstudentID.Name = "textstudentID";
+            this.textstudentID.Size = new System.Drawing.Size(285, 22);
+            this.textstudentID.TabIndex = 9;
             // 
-            // textBox2
+            // txtstudentname
             // 
-            this.textBox2.Location = new System.Drawing.Point(307, 121);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(285, 22);
-            this.textBox2.TabIndex = 10;
+            this.txtstudentname.Location = new System.Drawing.Point(307, 121);
+            this.txtstudentname.Name = "txtstudentname";
+            this.txtstudentname.Size = new System.Drawing.Size(285, 22);
+            this.txtstudentname.TabIndex = 10;
             // 
-            // textBox3
+            // txtstudentage
             // 
-            this.textBox3.Location = new System.Drawing.Point(307, 177);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(285, 22);
-            this.textBox3.TabIndex = 11;
+            this.txtstudentage.Location = new System.Drawing.Point(307, 177);
+            this.txtstudentage.Name = "txtstudentage";
+            this.txtstudentage.Size = new System.Drawing.Size(285, 22);
+            this.txtstudentage.TabIndex = 11;
             // 
-            // textBox4
+            // txtcourse
             // 
-            this.textBox4.Location = new System.Drawing.Point(307, 237);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(285, 22);
-            this.textBox4.TabIndex = 12;
+            this.txtcourse.Location = new System.Drawing.Point(307, 237);
+            this.txtcourse.Name = "txtcourse";
+            this.txtcourse.Size = new System.Drawing.Size(285, 22);
+            this.txtcourse.TabIndex = 12;
             // 
-            // dataGridView1
+            // dgvdisplay
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(720, 77);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(408, 182);
-            this.dataGridView1.TabIndex = 13;
+            this.dgvdisplay.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvdisplay.Location = new System.Drawing.Point(720, 77);
+            this.dgvdisplay.Name = "dgvdisplay";
+            this.dgvdisplay.RowHeadersWidth = 51;
+            this.dgvdisplay.RowTemplate.Height = 24;
+            this.dgvdisplay.Size = new System.Drawing.Size(408, 182);
+            this.dgvdisplay.TabIndex = 13;
             // 
             // StudentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1201, 539);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.dgvdisplay);
+            this.Controls.Add(this.txtcourse);
+            this.Controls.Add(this.txtstudentage);
+            this.Controls.Add(this.txtstudentname);
+            this.Controls.Add(this.textstudentID);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.GenerateReport);
-            this.Controls.Add(this.DeleteStudent);
-            this.Controls.Add(this.UpdateStudent);
-            this.Controls.Add(this.ViewStudents);
-            this.Controls.Add(this.AddStudent);
+            this.Controls.Add(this.btnGenerateReport);
+            this.Controls.Add(this.btnDeleteStudent);
+            this.Controls.Add(this.btnUpdateStudent);
+            this.Controls.Add(this.btnViewStudents);
+            this.Controls.Add(this.BtnAddStudent);
             this.Name = "StudentForm";
             this.Text = "StudentForm";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvdisplay)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -194,19 +194,19 @@
 
         #endregion
 
-        private System.Windows.Forms.Button AddStudent;
-        private System.Windows.Forms.Button ViewStudents;
-        private System.Windows.Forms.Button UpdateStudent;
-        private System.Windows.Forms.Button DeleteStudent;
-        private System.Windows.Forms.Button GenerateReport;
+        private System.Windows.Forms.Button BtnAddStudent;
+        private System.Windows.Forms.Button btnViewStudents;
+        private System.Windows.Forms.Button btnUpdateStudent;
+        private System.Windows.Forms.Button btnDeleteStudent;
+        private System.Windows.Forms.Button btnGenerateReport;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.TextBox textstudentID;
+        private System.Windows.Forms.TextBox txtstudentname;
+        private System.Windows.Forms.TextBox txtstudentage;
+        private System.Windows.Forms.TextBox txtcourse;
+        private System.Windows.Forms.DataGridView dgvdisplay;
     }
 }
