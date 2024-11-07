@@ -81,7 +81,7 @@ namespace Student_Management_System_using_Windows_Forms_LLG.Presentation_Layer
             axWindowsMediaPlayer1.uiMode = "None";
             axWindowsMediaPlayer1.settings.setMode("loop", true);
             axWindowsMediaPlayer1.stretchToFit = true;
-            axWindowsMediaPlayer1.BackColor = Color.Transparent;
+            axWindowsMediaPlayer1.BackColor = this.BackColor;
             axWindowsMediaPlayer1.settings.autoStart = true;
         }
 

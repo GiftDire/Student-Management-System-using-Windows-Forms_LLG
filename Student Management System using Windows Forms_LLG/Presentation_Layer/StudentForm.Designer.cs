@@ -52,12 +52,12 @@
             // BtnAddStudent
             // 
             this.BtnAddStudent.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.BtnAddStudent.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnAddStudent.BackgroundImage")));
             this.BtnAddStudent.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.BtnAddStudent.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
-            this.BtnAddStudent.FlatAppearance.BorderSize = 0;
-            this.BtnAddStudent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnAddStudent.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.BtnAddStudent.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnAddStudent.ForeColor = System.Drawing.Color.Black;
+            this.BtnAddStudent.ForeColor = System.Drawing.Color.White;
             this.BtnAddStudent.Location = new System.Drawing.Point(59, 361);
             this.BtnAddStudent.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BtnAddStudent.Name = "BtnAddStudent";
@@ -70,10 +70,11 @@
             // btnViewStudents
             // 
             this.btnViewStudents.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.btnViewStudents.FlatAppearance.BorderSize = 0;
+            this.btnViewStudents.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnViewStudents.BackgroundImage")));
+            this.btnViewStudents.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnViewStudents.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnViewStudents.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.btnViewStudents.ForeColor = System.Drawing.Color.Black;
+            this.btnViewStudents.ForeColor = System.Drawing.Color.White;
             this.btnViewStudents.Location = new System.Drawing.Point(230, 361);
             this.btnViewStudents.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnViewStudents.Name = "btnViewStudents";
@@ -86,7 +87,7 @@
             // btnUpdateStudent
             // 
             this.btnUpdateStudent.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.btnUpdateStudent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpdateStudent.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnUpdateStudent.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.btnUpdateStudent.ForeColor = System.Drawing.Color.Black;
             this.btnUpdateStudent.Location = new System.Drawing.Point(398, 361);
@@ -100,10 +101,10 @@
             // btnDeleteStudent
             // 
             this.btnDeleteStudent.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.btnDeleteStudent.FlatAppearance.BorderSize = 0;
-            this.btnDeleteStudent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDeleteStudent.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnDeleteStudent.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.btnDeleteStudent.ForeColor = System.Drawing.Color.Black;
+            this.btnDeleteStudent.ForeColor = System.Drawing.Color.White;
+            this.btnDeleteStudent.Image = ((System.Drawing.Image)(resources.GetObject("btnDeleteStudent.Image")));
             this.btnDeleteStudent.Location = new System.Drawing.Point(589, 361);
             this.btnDeleteStudent.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnDeleteStudent.Name = "btnDeleteStudent";
@@ -115,9 +116,10 @@
             // btnGenerateReport
             // 
             this.btnGenerateReport.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.btnGenerateReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGenerateReport.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnGenerateReport.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.btnGenerateReport.ForeColor = System.Drawing.Color.Black;
+            this.btnGenerateReport.ForeColor = System.Drawing.Color.White;
+            this.btnGenerateReport.Image = ((System.Drawing.Image)(resources.GetObject("btnGenerateReport.Image")));
             this.btnGenerateReport.Location = new System.Drawing.Point(712, 361);
             this.btnGenerateReport.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnGenerateReport.Name = "btnGenerateReport";
