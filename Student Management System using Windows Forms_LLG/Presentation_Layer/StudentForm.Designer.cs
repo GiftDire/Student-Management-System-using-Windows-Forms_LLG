@@ -276,6 +276,7 @@
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "StudentForm";
             this.Text = "StudentForm";
+            this.Activated += new System.EventHandler(this.StudentForm_Activated);
             ((System.ComponentModel.ISupportInitialize)(this.dgvdisplay)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).EndInit();
             this.ResumeLayout(false);

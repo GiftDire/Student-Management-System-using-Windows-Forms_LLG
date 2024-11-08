@@ -73,7 +73,14 @@ namespace Student_Management_System_using_Windows_Forms_LLG.Presentation_Layer
             }
         }
 
-        private void axWindowsMediaPlayer1_Enter(object sender, EventArgs e)
+      
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void StudentForm_Activated(object sender, EventArgs e)
         {
             axWindowsMediaPlayer1.URL = @"C:\Users\Limpho\Videos\5200-183786525.mp4";
             axWindowsMediaPlayer1.Ctlcontrols.play();
@@ -85,7 +92,7 @@ namespace Student_Management_System_using_Windows_Forms_LLG.Presentation_Layer
             axWindowsMediaPlayer1.settings.autoStart = true;
         }
 
-        private void label5_Click(object sender, EventArgs e)
+        private void axWindowsMediaPlayer1_Enter(object sender, EventArgs e)
         {
 
         }
