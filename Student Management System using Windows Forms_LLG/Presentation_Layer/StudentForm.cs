@@ -45,21 +45,17 @@ namespace Student_Management_System_using_Windows_Forms_LLG.Presentation_Layer
 
         private void btnViewStudents_Click(object sender, EventArgs e)
         {
-            if (!int.TryParse(txtstudentage.Text, out int age))
+            try
             {
-                MessageBox.Show("Enter a valid age");
-                return;
-            }
+                // Retrieve the list of students from the file
+                List<Student> students = FL.ReadStudents();
 
-            var updatedStudent = new Student(txtstudentID.Text, txtstudentname.Text, age, txtcourse.Text);
-            if (dataHandler.UpdateStudent(updatedStudent))
-            {
-               // RefreshStudentList();
-                MessageBox.Show("Student information updated.");
+                // Bind the retrieved list to the DataGridView to display all students
+                dgvdisplay.DataSource = students;
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("Student not found.");
+                MessageBox.Show($"Error displaying students: {ex.Message}");
             }
         }
 
@@ -94,13 +90,9 @@ namespace Student_Management_System_using_Windows_Forms_LLG.Presentation_Layer
 
         private void btnUpdateStudent_Click(object sender, EventArgs e)
         {
-            if (!int.TryParse(txtstudentage.Text, out int age))
-            {
-                MessageBox.Show("Enter a valid age");
-                return;
-            }
+           
 
-            var updatedStudent = new Student(txtstudentID.Text, txtstudentname.Text, age, txtcourse.Text);
+            var updatedStudent = new Student(txtstudentID.Text, txtstudentname.Text,int.Parse(txtstudentage.Text), txtcourse.Text);
             if (dataHandler.UpdateStudent(updatedStudent))
             {
                 RefreshStudentList();
