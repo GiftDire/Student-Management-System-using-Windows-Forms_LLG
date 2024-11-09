@@ -188,6 +188,7 @@
             this.txtstudentID.Name = "txtstudentID";
             this.txtstudentID.Size = new System.Drawing.Size(285, 22);
             this.txtstudentID.TabIndex = 9;
+            this.txtstudentID.Text = "12";
             // 
             // txtstudentname
             // 

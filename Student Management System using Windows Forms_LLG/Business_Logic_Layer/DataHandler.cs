@@ -19,15 +19,12 @@ namespace Student_Management_System_using_Windows_Forms_LLG.Business_Logic_Layer
         {
             studentList = fileHandler.ReadStudents();
         }
-
-        // Adds a new student and writes to file
         public void AddStudent(Student student)
         {
             studentList.Add(student);
             fileHandler.WriteStudents(studentList);
         }
 
-        // Updates student information and writes to file
         public bool UpdateStudent(Student updatedStudent)
         {
             var student = studentList.Find(s => s.StudentID == updatedStudent.StudentID);
@@ -42,9 +39,10 @@ namespace Student_Management_System_using_Windows_Forms_LLG.Business_Logic_Layer
             return false;
         }
 
-        // Deletes a student from the list and updates the file
+       
         public bool DeleteStudent(string studentID)
         {
+            MessageBox.Show($"Searching for StudentID: {studentID}"); 
             var student = studentList.Find(s => s.StudentID == studentID);
             if (student != null)
             {
@@ -52,16 +50,16 @@ namespace Student_Management_System_using_Windows_Forms_LLG.Business_Logic_Layer
                 fileHandler.WriteStudents(studentList);
                 return true;
             }
+            MessageBox.Show("Student not found in the list."); 
             return false;
         }
 
-        // Gets the list of all students
+    
         public List<Student> GetAllStudents()
         {
             return studentList;
         }
 
-        // Generates a summary report
         public void GenerateSummary()
         {
             fileHandler.GenerateSummary(studentList);

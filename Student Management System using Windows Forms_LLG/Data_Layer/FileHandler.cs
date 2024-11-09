@@ -13,10 +13,10 @@ namespace Student_Management_System_using_Windows_Forms_LLG.Data_Layer
 
     class FileHandler
     {
-        private readonly string studentFilePath = @"C:\Users\direo\OneDrive\Desktop\Students.txt";
-        private readonly string summaryFilePath = @"C:\Users\direo\OneDrive\Desktop\Summary.txt";
+       public string studentFilePath = @"C:\Users\direo\OneDrive\Desktop\Students.txt";
+       public  string summaryFilePath = @"C:\Users\direo\OneDrive\Desktop\Summary.txt";
 
-        // Method to read all student data from the file
+  
         public List<Student> ReadStudents()
         {
             List<Student> students = new List<Student>();
@@ -52,7 +52,7 @@ namespace Student_Management_System_using_Windows_Forms_LLG.Data_Layer
             return students;
         }
 
-        // Method to write all student data back to the file
+
         public void WriteStudents(List<Student> students)
         {
             try
@@ -61,9 +61,10 @@ namespace Student_Management_System_using_Windows_Forms_LLG.Data_Layer
                 {
                     foreach (var student in students)
                     {
-                        writer.WriteLine(student.ToFileFormat());
+                        writer.WriteLine($"StudentID : {student.StudentID},\t Name: {student.Name},\t Age: {student.Age},\t Course: {student.Course}");
                     }
                 }
+                
             }
             catch (Exception ex)
             {
@@ -71,7 +72,7 @@ namespace Student_Management_System_using_Windows_Forms_LLG.Data_Layer
             }
         }
 
-        // Method to generate a summary report and save it to a file
+      
         public void GenerateSummary(List<Student> students)
         {
             try
