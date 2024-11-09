@@ -19,7 +19,7 @@ namespace Student_Management_System_using_Windows_Forms_LLG.Presentation_Layer
 {
     public partial class StudentForm : Form
     {
-        DataHandler hl = new DataHandler();
+        private DataHandler dataHandler = new DataHandler();
         FileHandler FL = new FileHandler();
         public StudentForm()
         {
@@ -28,48 +28,38 @@ namespace Student_Management_System_using_Windows_Forms_LLG.Presentation_Layer
 
         private void AddStudent_Click(object sender, EventArgs e)
         {
-           string StudentId = txtstudentname.Text;
-           string StudentName = txtstudentname.Text;
-         //  string studentAge = txtstudentage.Text;
-         if (!int.TryParse(txtstudentage.Text, out int age))
-         {
-               MessageBox.Show("Enter valid age");
+            if (!int.TryParse(txtstudentage.Text, out int age))
+            {
+                MessageBox.Show("Enter a valid age");
                 return;
-         }
-            try
-            {
-                string course = txtcourse.Text;
-
-                Student newstudent = new Student(StudentId, Name, age, course);
-
-                hl.Add(newstudent);
-
-                MessageBox.Show("new student has been added to the file");
-            }
-            catch(Exception ex) 
-            {
-                MessageBox.Show(ex.Message);
-                MessageBox.Show("Something went Wrong");
             }
 
+            var newStudent = new Student(txtstudentID.Text, txtstudentname.Text, age, txtcourse.Text);
+            dataHandler.AddStudent(newStudent);
+            RefreshStudentList();
+            MessageBox.Show("New student has been added.");
 
 
-            
+
         }
 
         private void btnViewStudents_Click(object sender, EventArgs e)
         {
-            try
+            if (!int.TryParse(txtstudentage.Text, out int age))
             {
-                
-                List<Student> students = FL.ReadStudents();
-
-             
-                dgvdisplay.DataSource = students;
+                MessageBox.Show("Enter a valid age");
+                return;
             }
-            catch (Exception ex)
+
+            var updatedStudent = new Student(txtstudentID.Text, txtstudentname.Text, age, txtcourse.Text);
+            if (dataHandler.UpdateStudent(updatedStudent))
             {
-                MessageBox.Show(ex.Message);
+               // RefreshStudentList();
+                MessageBox.Show("Student information updated.");
+            }
+            else
+            {
+                MessageBox.Show("Student not found.");
             }
         }
 
@@ -82,7 +72,7 @@ namespace Student_Management_System_using_Windows_Forms_LLG.Presentation_Layer
 
         private void StudentForm_Activated(object sender, EventArgs e)
         {
-            axWindowsMediaPlayer1.URL = @"C:\Users\Limpho\Videos\5200-183786525.mp4";
+            axWindowsMediaPlayer1.URL = @"C:\Users\direo\Downloads\5200-183786525.mp4";
             axWindowsMediaPlayer1.Ctlcontrols.play();
             // Configure settings to hide controls and fit to window size
             axWindowsMediaPlayer1.uiMode = "None";
@@ -91,10 +81,55 @@ namespace Student_Management_System_using_Windows_Forms_LLG.Presentation_Layer
             axWindowsMediaPlayer1.BackColor = this.BackColor;
             axWindowsMediaPlayer1.settings.autoStart = true;
         }
+        private void RefreshStudentList()
+        {
+            dgvdisplay.DataSource = null;
+            dgvdisplay.DataSource = dataHandler.GetAllStudents();
+        }
 
         private void axWindowsMediaPlayer1_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnUpdateStudent_Click(object sender, EventArgs e)
+        {
+            if (!int.TryParse(txtstudentage.Text, out int age))
+            {
+                MessageBox.Show("Enter a valid age");
+                return;
+            }
+
+            var updatedStudent = new Student(txtstudentID.Text, txtstudentname.Text, age, txtcourse.Text);
+            if (dataHandler.UpdateStudent(updatedStudent))
+            {
+                RefreshStudentList();
+                MessageBox.Show("Student information updated.");
+            }
+            else
+            {
+                MessageBox.Show("Student not found.");
+            }
+
+        }
+
+        private void btnDeleteStudent_Click(object sender, EventArgs e)
+        {
+            string studentID = txtstudentID.Text;
+            if (dataHandler.DeleteStudent(studentID))
+            {
+                RefreshStudentList();
+                MessageBox.Show("Student deleted.");
+            }
+            else
+            {
+                MessageBox.Show("Student not found.");
+            }
+        }
+
+        private void btnGenerateReport_Click(object sender, EventArgs e)
+        {
+            dataHandler.GenerateSummary();
         }
     }
 }

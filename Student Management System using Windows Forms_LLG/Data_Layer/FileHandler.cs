@@ -10,15 +10,15 @@ using System.Windows.Forms;
 
 namespace Student_Management_System_using_Windows_Forms_LLG.Data_Layer
 {
+
     class FileHandler
     {
-        private readonly string studentFilePath = "students.txt";
-        private readonly string summaryFilePath = "summary.txt";
+        private readonly string studentFilePath = @"C:\Users\direo\OneDrive\Desktop\Students.txt";
+        private readonly string summaryFilePath = @"C:\Users\direo\OneDrive\Desktop\Summary.txt";
 
-        // Method to read all student data from the file using StreamReader
+        // Method to read all student data from the file
         public List<Student> ReadStudents()
         {
-            string studentFilePath = @"C:\Users\direo\OneDrive\Desktop\Students.txt";
             List<Student> students = new List<Student>();
 
             try
@@ -30,38 +30,12 @@ namespace Student_Management_System_using_Windows_Forms_LLG.Data_Layer
                         string line;
                         while ((line = reader.ReadLine()) != null)
                         {
-                            
                             if (string.IsNullOrWhiteSpace(line))
                                 continue;
 
-                         
-                            var parts = line.Split(',');
-
-                         
-                            if (parts.Length >= 4)
-                            {
-                                try
-                                {
-                                
-                                    string studentID = parts[0].Split(':')[1].Trim();
-                                    string name = parts[1].Split(':')[1].Trim();
-                                    int age = int.Parse(parts[2].Split(':')[1].Trim());
-                                    string course = parts[3].Split(':')[1].Trim();
-
-                                    
-                                    students.Add(new Student(studentID, name, age, course));
-                                }
-                                catch (Exception ex)
-                                {
-                                    
-                                    MessageBox.Show($"Error parsing line: {line}\n{ex.Message}");
-                                }
-                            }
-                            else
-                            {
-                                // Log or handle lines that don't have the expected number of parts
-                                MessageBox.Show($"Invalid line format: {line}");
-                            }
+                            var student = Student.FromFileFormat(line);
+                            if (student != null)
+                                students.Add(student);
                         }
                     }
                 }
@@ -78,6 +52,45 @@ namespace Student_Management_System_using_Windows_Forms_LLG.Data_Layer
             return students;
         }
 
+        // Method to write all student data back to the file
+        public void WriteStudents(List<Student> students)
+        {
+            try
+            {
+                using (StreamWriter writer = new StreamWriter(studentFilePath, false))
+                {
+                    foreach (var student in students)
+                    {
+                        writer.WriteLine(student.ToFileFormat());
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
 
+        // Method to generate a summary report and save it to a file
+        public void GenerateSummary(List<Student> students)
+        {
+            try
+            {
+                int totalStudents = students.Count;
+                double averageAge = students.Count > 0 ? students.Average(s => s.Age) : 0;
+
+                using (StreamWriter writer = new StreamWriter(summaryFilePath, false))
+                {
+                    writer.WriteLine($"Total Students: {totalStudents}");
+                    writer.WriteLine($"Average Age: {averageAge:F2}");
+                }
+
+                MessageBox.Show("Summary report generated successfully.");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }
