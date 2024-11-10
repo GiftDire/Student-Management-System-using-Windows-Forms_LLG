@@ -121,7 +121,7 @@
   <data name="BtnAddStudent.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAl4AAAGiCAYAAAA2mch5AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vgAADr4B6kKxwAAA/7JJREFUeF6s/XW4HdWWtg+vqlpr7yghBIK7u8PBJQ5xJ0qCE4gQdweSEHd3d3cj
+        vwAADr8BOAVTJAAA/7JJREFUeF6s/XW4HdWWtg+vqlpr7yghBIK7u8PBJQ5xJ0qCE4gQdweSEHd3d3cj
         JMHdHQ5H+5zTfbr7tL7d4/fco6rWXnsTut/3u74/nmuW16xatWreNcaYY2ay9zay6L5GFtzb0DL3N7ZM
         jeaWqd3SMnVbWaZea8s89Ihl6mgePdhUy9poGrW1oHZbC0+gqE47V1i3nQUSpS+r3UZqbVkpV0tlzVYW
         1dBxH9A5H9T50AOcp5UFNR5xlVp+f4tY951AWh88qPpS3i9pWXhvC4uk4J5mlrlXdb9H13dPkxKxTAru
@@ -7976,7 +7976,7 @@
   <data name="btnViewStudents.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAl4AAAGiCAYAAAA2mch5AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vgAADr4B6kKxwAAA/7JJREFUeF6s/XW4HdWWtg+vqlpr7yghBIK7u8PBJQ5xJ0qCE4gQdweSEHd3d3cj
+        vwAADr8BOAVTJAAA/7JJREFUeF6s/XW4HdWWtg+vqlpr7yghBIK7u8PBJQ5xJ0qCE4gQdweSEHd3d3cj
         JMHdHQ5H+5zTfbr7tL7d4/fco6rWXnsTut/3u74/nmuW16xatWreNcaYY2ay9zay6L5GFtzb0DL3N7ZM
         jeaWqd3SMnVbWaZea8s89Ihl6mgePdhUy9poGrW1oHZbC0+gqE47V1i3nQUSpS+r3UZqbVkpV0tlzVYW
         1dBxH9A5H9T50AOcp5UFNR5xlVp+f4tY951AWh88qPpS3i9pWXhvC4uk4J5mlrlXdb9H13dPkxKxTAru
