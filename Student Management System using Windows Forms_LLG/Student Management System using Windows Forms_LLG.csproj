@@ -48,6 +48,12 @@
   <ItemGroup>
     <Compile Include="Business_Logic_Layer\DataHandler.cs" />
     <Compile Include="Data_Layer\FileHandler.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentation_Layer\StudentForm.cs">
       <SubType>Form</SubType>
     </Compile>
