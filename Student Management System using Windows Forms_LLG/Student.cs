@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Student_Management_System_using_Windows_Forms_LLG
 {
@@ -26,9 +27,36 @@ namespace Student_Management_System_using_Windows_Forms_LLG
         }
         public static Student FromFileFormat(string line)
         {
-            var parts = line.Split(',');
+            try
+            {
+                var parts = line.Split(',');
 
-            return new Student(parts[0], parts[1], int.Parse(parts[2]), parts[3]);
+                if (parts.Length == 4) // Assuming there are 4 fields: ID, Name, Age, Course
+                {
+                    string studentID = parts[0];
+                    string name = parts[1];
+                    if (int.TryParse(parts[2], out int age)) // Parse the age
+                    {
+                        string course = parts[3];
+                        return new Student(studentID, name, age, course);
+                    }
+                    else
+                    {
+                        MessageBox.Show($"Invalid age format in line: {line}");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show($"Incorrect format in line: {line}");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error parsing line: {line}\n{ex.Message}");
+            }
+
+            return null; // Return null if parsing failed
         }
+
     }
 }
