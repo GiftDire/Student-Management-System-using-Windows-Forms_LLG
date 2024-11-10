@@ -19,7 +19,7 @@ namespace Student_Management_System_using_Windows_Forms_LLG.Presentation_Layer
 {
     public partial class StudentForm : Form
     {
-        private DataHandler dataHandler = new DataHandler();
+        DataHandler dataHandler = new DataHandler();
         FileHandler FL = new FileHandler();
         public StudentForm()
         {

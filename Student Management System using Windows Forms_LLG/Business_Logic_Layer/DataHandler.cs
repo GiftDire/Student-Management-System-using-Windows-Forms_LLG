@@ -12,8 +12,8 @@ namespace Student_Management_System_using_Windows_Forms_LLG.Business_Logic_Layer
 {
     class DataHandler
     {
-        private FileHandler fileHandler = new FileHandler();
-        private List<Student> studentList;
+         FileHandler fileHandler = new FileHandler();
+         List<Student> studentList;
 
         public DataHandler()
         {
