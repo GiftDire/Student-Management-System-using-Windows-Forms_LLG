@@ -186,6 +186,11 @@ namespace Student_Management_System_using_Windows_Forms_LLG.Presentation_Layer
                 MessageBox.Show("Error generating report: " + ex.Message);
             }
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
     
 }
