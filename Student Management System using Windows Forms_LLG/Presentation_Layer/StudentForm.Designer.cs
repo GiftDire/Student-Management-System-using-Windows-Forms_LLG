@@ -45,6 +45,7 @@
             this.dgvdisplay = new System.Windows.Forms.DataGridView();
             this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
             this.label5 = new System.Windows.Forms.Label();
+            this.lstview = new System.Windows.Forms.ListView();
             ((System.ComponentModel.ISupportInitialize)(this.dgvdisplay)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
             this.SuspendLayout();
@@ -138,7 +139,7 @@
             this.label1.Font = new System.Drawing.Font("Palatino Linotype", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Image = ((System.Drawing.Image)(resources.GetObject("label1.Image")));
-            this.label1.Location = new System.Drawing.Point(148, 181);
+            this.label1.Location = new System.Drawing.Point(83, 173);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(110, 25);
             this.label1.TabIndex = 5;
@@ -150,7 +151,7 @@
             this.label2.Font = new System.Drawing.Font("Palatino Linotype", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Image = ((System.Drawing.Image)(resources.GetObject("label2.Image")));
-            this.label2.Location = new System.Drawing.Point(147, 236);
+            this.label2.Location = new System.Drawing.Point(83, 236);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(138, 25);
             this.label2.TabIndex = 6;
@@ -162,7 +163,7 @@
             this.label3.Font = new System.Drawing.Font("Palatino Linotype", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Image = ((System.Drawing.Image)(resources.GetObject("label3.Image")));
-            this.label3.Location = new System.Drawing.Point(147, 289);
+            this.label3.Location = new System.Drawing.Point(83, 288);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(119, 25);
             this.label3.TabIndex = 7;
@@ -175,7 +176,7 @@
             this.label4.Font = new System.Drawing.Font("Palatino Linotype", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Image = ((System.Drawing.Image)(resources.GetObject("label4.Image")));
-            this.label4.Location = new System.Drawing.Point(147, 345);
+            this.label4.Location = new System.Drawing.Point(83, 345);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(75, 25);
             this.label4.TabIndex = 8;
@@ -183,7 +184,7 @@
             // 
             // txtstudentID
             // 
-            this.txtstudentID.Location = new System.Drawing.Point(307, 172);
+            this.txtstudentID.Location = new System.Drawing.Point(268, 177);
             this.txtstudentID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtstudentID.Name = "txtstudentID";
             this.txtstudentID.Size = new System.Drawing.Size(285, 22);
@@ -192,7 +193,7 @@
             // 
             // txtstudentname
             // 
-            this.txtstudentname.Location = new System.Drawing.Point(307, 236);
+            this.txtstudentname.Location = new System.Drawing.Point(268, 236);
             this.txtstudentname.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtstudentname.Name = "txtstudentname";
             this.txtstudentname.Size = new System.Drawing.Size(285, 22);
@@ -200,7 +201,7 @@
             // 
             // txtstudentage
             // 
-            this.txtstudentage.Location = new System.Drawing.Point(307, 292);
+            this.txtstudentage.Location = new System.Drawing.Point(268, 288);
             this.txtstudentage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtstudentage.Name = "txtstudentage";
             this.txtstudentage.Size = new System.Drawing.Size(285, 22);
@@ -208,7 +209,7 @@
             // 
             // txtcourse
             // 
-            this.txtcourse.Location = new System.Drawing.Point(307, 345);
+            this.txtcourse.Location = new System.Drawing.Point(268, 349);
             this.txtcourse.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtcourse.Name = "txtcourse";
             this.txtcourse.Size = new System.Drawing.Size(285, 22);
@@ -217,18 +218,18 @@
             // dgvdisplay
             // 
             this.dgvdisplay.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvdisplay.Location = new System.Drawing.Point(669, 172);
+            this.dgvdisplay.Location = new System.Drawing.Point(577, 177);
             this.dgvdisplay.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvdisplay.Name = "dgvdisplay";
             this.dgvdisplay.RowHeadersWidth = 51;
             this.dgvdisplay.RowTemplate.Height = 24;
-            this.dgvdisplay.Size = new System.Drawing.Size(459, 197);
+            this.dgvdisplay.Size = new System.Drawing.Size(323, 197);
             this.dgvdisplay.TabIndex = 13;
             // 
             // axWindowsMediaPlayer1
             // 
             this.axWindowsMediaPlayer1.Enabled = true;
-            this.axWindowsMediaPlayer1.Location = new System.Drawing.Point(-11, -1);
+            this.axWindowsMediaPlayer1.Location = new System.Drawing.Point(-10, -2);
             this.axWindowsMediaPlayer1.Margin = new System.Windows.Forms.Padding(4);
             this.axWindowsMediaPlayer1.Name = "axWindowsMediaPlayer1";
             this.axWindowsMediaPlayer1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer1.OcxState")));
@@ -254,11 +255,21 @@
             this.label5.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
+            // lstview
+            // 
+            this.lstview.HideSelection = false;
+            this.lstview.Location = new System.Drawing.Point(923, 177);
+            this.lstview.Name = "lstview";
+            this.lstview.Size = new System.Drawing.Size(215, 197);
+            this.lstview.TabIndex = 16;
+            this.lstview.UseCompatibleStateImageBehavior = false;
+            // 
             // StudentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1201, 539);
+            this.ClientSize = new System.Drawing.Size(1160, 536);
+            this.Controls.Add(this.lstview);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.dgvdisplay);
             this.Controls.Add(this.txtcourse);
@@ -304,5 +315,6 @@
         private System.Windows.Forms.DataGridView dgvdisplay;
         private AxWMPLib.AxWindowsMediaPlayer axWindowsMediaPlayer1;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ListView lstview;
     }
 }

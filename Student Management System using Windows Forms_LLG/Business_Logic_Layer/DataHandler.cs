@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using Student_Management_System_using_Windows_Forms_LLG.Data_Layer;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+
+
 
 
 namespace Student_Management_System_using_Windows_Forms_LLG.Business_Logic_Layer
@@ -54,7 +57,7 @@ namespace Student_Management_System_using_Windows_Forms_LLG.Business_Logic_Layer
 
         public bool DeleteStudent(string studentID)
         {
-           // MessageBox.Show($"Searching for StudentID: {studentID}");
+          
             bool studentFound = false;
 
             for (int i = 0; i < studentList.Count; i++)
@@ -86,9 +89,13 @@ namespace Student_Management_System_using_Windows_Forms_LLG.Business_Logic_Layer
             return studentList;
         }
 
-        public void GenerateSummary()
+        public void GenerateSummary(List<Student> students, System.Windows.Forms.ListView lstview)
         {
-            fileHandler.GenerateSummary(studentList);
+           
+            FileHandler fileHandler = new FileHandler();
+            fileHandler.GenerateSummary(students, lstview);
         }
+
     }
 }
+

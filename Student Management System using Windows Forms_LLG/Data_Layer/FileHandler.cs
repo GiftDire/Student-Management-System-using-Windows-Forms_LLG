@@ -8,6 +8,7 @@ using Student_Management_System_using_Windows_Forms_LLG.Business_Logic_Layer;
 using System.IO;
 using System.Windows.Forms;
 
+
 namespace Student_Management_System_using_Windows_Forms_LLG.Data_Layer
 {
 
@@ -16,7 +17,7 @@ namespace Student_Management_System_using_Windows_Forms_LLG.Data_Layer
        public string studentFilePath = @"C:\Users\direo\OneDrive\Desktop\Students.txt";
        public  string summaryFilePath = @"C:\Users\direo\OneDrive\Desktop\Summary.txt";
 
-  
+
         public List<Student> ReadStudents()
         {
             List<Student> students = new List<Student>();
@@ -33,9 +34,21 @@ namespace Student_Management_System_using_Windows_Forms_LLG.Data_Layer
                             if (string.IsNullOrWhiteSpace(line))
                                 continue;
 
-                            var student = Student.FromFileFormat(line);
-                            if (student != null)
+                            // Split the line by commas and tabs to parse each field
+                            var parts = line.Split(new[] { ',', '\t' }, StringSplitOptions.RemoveEmptyEntries);
+
+                            if (parts.Length >= 4)
+                            {
+                                // Extract values by trimming the label parts
+                                string studentID = parts[0].Replace("StudentID :", "").Trim();
+                                string name = parts[1].Replace("Name:", "").Trim();
+                                int age = int.Parse(parts[2].Replace("Age:", "").Trim());
+                                string course = parts[3].Replace("Course:", "").Trim();
+
+                                // Create and add the Student object
+                                var student = new Student(studentID, name, age, course);
                                 students.Add(student);
+                            }
                         }
                     }
                 }
@@ -51,6 +64,7 @@ namespace Student_Management_System_using_Windows_Forms_LLG.Data_Layer
 
             return students;
         }
+
 
 
         public void WriteStudents(List<Student> students)
@@ -71,9 +85,7 @@ namespace Student_Management_System_using_Windows_Forms_LLG.Data_Layer
                 MessageBox.Show(ex.Message);
             }
         }
-
-      
-        public void GenerateSummary(List<Student> students)
+        public void GenerateSummary(List<Student> students, ListView lstview)
         {
             try
             {
@@ -90,19 +102,36 @@ namespace Student_Management_System_using_Windows_Forms_LLG.Data_Layer
                     averageAge = totalAge / totalStudents;
                 }
 
+                string[] summaryData = new string[]
+                {
+            $"Total Students: {totalStudents}",
+            $"Average Age: {averageAge:F2}"
+                };
+
+               
                 using (StreamWriter writer = new StreamWriter(summaryFilePath, false))
                 {
                     writer.WriteLine($"Total Students: {totalStudents}");
                     writer.WriteLine($"Average Age: {averageAge:F2}");
                 }
 
+                lstview.Items.Clear();
+                foreach (string data in summaryData)
+                {
+                    lstview.Items.Add(new ListViewItem(new string[] { data }));
+                }
+
                 MessageBox.Show("Summary report generated successfully.");
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Error generating summary: " + ex.Message);
             }
-
         }
+
+
+
+
+
     }
 }
