@@ -15,6 +15,7 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using System.Xml.Linq;
 using System.Drawing.Drawing2D;
 
+
 namespace Student_Management_System_using_Windows_Forms_LLG.Presentation_Layer
 {
     public partial class StudentForm : Form
@@ -64,16 +65,12 @@ namespace Student_Management_System_using_Windows_Forms_LLG.Presentation_Layer
             txtstudentage.Clear();
             txtcourse.Clear();
         }
-
-
         private void btnViewStudents_Click(object sender, EventArgs e)
         {
             try
             {
-                // Retrieve the list of students from the file
+               
                 List<Student> students = FL.ReadStudents();
-
-                // Bind the retrieved list to the DataGridView to display all students
                 dgvdisplay.DataSource = students;
             }
             catch (Exception ex)
@@ -155,6 +152,10 @@ namespace Student_Management_System_using_Windows_Forms_LLG.Presentation_Layer
             {
                 MessageBox.Show("An error occurred: " + ex.Message);
             }
+            txtstudentID.Clear();
+            txtstudentname.Clear();
+            txtstudentage.Clear();
+            txtcourse.Clear();
         }
         private void btnDeleteStudent_Click(object sender, EventArgs e)
         {
@@ -175,11 +176,24 @@ namespace Student_Management_System_using_Windows_Forms_LLG.Presentation_Layer
             {
                 MessageBox.Show("Student not found.");
             }
+            txtstudentID.Clear();
+            txtstudentname.Clear();
+            txtstudentage.Clear();
+            txtcourse.Clear();
         }
 
         private void btnGenerateReport_Click(object sender, EventArgs e)
         {
-            dataHandler.GenerateSummary();
+
+            try
+            {
+                List<Student> students = dataHandler.GetAllStudents();
+                dataHandler.GenerateSummary(students, lstview); 
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error generating report: " + ex.Message);
+            }
         }
     }
 }
