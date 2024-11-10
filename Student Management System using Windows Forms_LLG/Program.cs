@@ -21,7 +21,7 @@ namespace Student_Management_System_using_Windows_Forms_LLG
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //  Application.Run(new Form1());
-            Application.Run(new StudentForm());
+            Application.Run(new StudentForm2());
         }
     }
 }
