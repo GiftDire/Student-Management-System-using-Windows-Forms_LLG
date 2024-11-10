@@ -112,9 +112,9 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(144, 372);
+            this.button1.Location = new System.Drawing.Point(140, 380);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(168, 23);
+            this.button1.Size = new System.Drawing.Size(168, 33);
             this.button1.TabIndex = 10;
             this.button1.Text = "Add Student";
             this.button1.UseVisualStyleBackColor = true;
@@ -124,7 +124,7 @@
             // 
             this.btnUpdateStudent.Location = new System.Drawing.Point(457, 372);
             this.btnUpdateStudent.Name = "btnUpdateStudent";
-            this.btnUpdateStudent.Size = new System.Drawing.Size(75, 23);
+            this.btnUpdateStudent.Size = new System.Drawing.Size(96, 33);
             this.btnUpdateStudent.TabIndex = 11;
             this.btnUpdateStudent.Text = "Update";
             this.btnUpdateStudent.UseVisualStyleBackColor = true;
@@ -134,7 +134,7 @@
             // 
             this.btnViewAllstudents.Location = new System.Drawing.Point(349, 372);
             this.btnViewAllstudents.Name = "btnViewAllstudents";
-            this.btnViewAllstudents.Size = new System.Drawing.Size(75, 23);
+            this.btnViewAllstudents.Size = new System.Drawing.Size(102, 41);
             this.btnViewAllstudents.TabIndex = 12;
             this.btnViewAllstudents.Text = "View students";
             this.btnViewAllstudents.UseVisualStyleBackColor = true;
@@ -142,9 +142,9 @@
             // 
             // btndelete
             // 
-            this.btndelete.Location = new System.Drawing.Point(593, 372);
+            this.btndelete.Location = new System.Drawing.Point(592, 372);
             this.btndelete.Name = "btndelete";
-            this.btndelete.Size = new System.Drawing.Size(75, 23);
+            this.btndelete.Size = new System.Drawing.Size(108, 33);
             this.btndelete.TabIndex = 13;
             this.btndelete.Text = "Delete Student";
             this.btndelete.UseVisualStyleBackColor = true;
@@ -152,7 +152,7 @@
             // 
             // btnGenerateReport
             // 
-            this.btnGenerateReport.Location = new System.Drawing.Point(703, 372);
+            this.btnGenerateReport.Location = new System.Drawing.Point(883, 372);
             this.btnGenerateReport.Name = "btnGenerateReport";
             this.btnGenerateReport.Size = new System.Drawing.Size(75, 23);
             this.btnGenerateReport.TabIndex = 14;

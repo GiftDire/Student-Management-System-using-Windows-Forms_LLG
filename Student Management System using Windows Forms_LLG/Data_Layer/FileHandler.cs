@@ -17,7 +17,8 @@ namespace Student_Management_System_using_Windows_Forms_LLG.Data_Layer
        public string studentFilePath = @"C:\Users\direo\OneDrive\Desktop\Students.txt";
        public  string summaryFilePath = @"C:\Users\direo\OneDrive\Desktop\Summary.txt";
 
-
+        //The method down beloow read studenttextfile using the streamreader it then formats the values to fit into the Datagrid.
+        //The ReadStudents method reads student data from a file and returns a list of Student objects
         public List<Student> ReadStudents()
         {
             List<Student> students = new List<Student>();
@@ -34,18 +35,18 @@ namespace Student_Management_System_using_Windows_Forms_LLG.Data_Layer
                             if (string.IsNullOrWhiteSpace(line))
                                 continue;
 
-                            // Split the line by commas and tabs to parse each field
+                        
                             var parts = line.Split(new[] { ',', '\t' }, StringSplitOptions.RemoveEmptyEntries);
 
                             if (parts.Length >= 4)
                             {
-                                // Extract values by trimming the label parts
+                                
                                 string studentID = parts[0].Replace("StudentID :", "").Trim();
                                 string name = parts[1].Replace("Name:", "").Trim();
                                 int age = int.Parse(parts[2].Replace("Age:", "").Trim());
                                 string course = parts[3].Replace("Course:", "").Trim();
 
-                                // Create and add the Student object
+                               
                                 var student = new Student(studentID, name, age, course);
                                 students.Add(student);
                             }
@@ -66,7 +67,8 @@ namespace Student_Management_System_using_Windows_Forms_LLG.Data_Layer
         }
 
 
-
+        //The WriteStudents method saves a list of students to a file by writing each student's details in a formatted line.
+        //It overwrites any existing file content to ensure the data is up-to-date. If an error occurs, it displays an error message.
         public void WriteStudents(List<Student> students)
         {
             try
@@ -85,6 +87,8 @@ namespace Student_Management_System_using_Windows_Forms_LLG.Data_Layer
                 MessageBox.Show(ex.Message);
             }
         }
+        //The GenerateSummary method creates a summary of the student data, calculating the total number of students and the average age.
+        //\It saves these details to a file and displays them in a ListView for easy viewing. If an error occurs, it displays an error message.
         public void GenerateSummary(List<Student> students, ListView lstview)
         {
             try

@@ -1,4 +1,5 @@
-﻿using Student_Management_System_using_Windows_Forms_LLG.Business_Logic_Layer;
+﻿using AxWMPLib;
+using Student_Management_System_using_Windows_Forms_LLG.Business_Logic_Layer;
 using Student_Management_System_using_Windows_Forms_LLG.Data_Layer;
 using System;
 using System.Collections.Generic;
@@ -30,6 +31,8 @@ namespace Student_Management_System_using_Windows_Forms_LLG.Presentation_Layer
 
         }
 
+        /*: Adds a new student by validating input fields (ID, name, course, and age). If inputs are valid, 
+         * it creates a new Student object, adds it using DataHandler, updates the display, and clears the input fields.*/
         private void button1_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(txtstudentID.Text))
@@ -68,12 +71,14 @@ namespace Student_Management_System_using_Windows_Forms_LLG.Presentation_Layer
             txtcourse.Clear();
 
         }
+        /* Updates the DataGridView (dgvdisplay) to display the current list of students by reloading data from the DataHandler.*/
         private void RefreshStudentList()
         {
             dgvdisplay.DataSource = null;
             dgvdisplay.DataSource = dataHandler.GetAllStudents();
         }
-
+        /*Loads and displays a list of students stored in a file using FileHandler. 
+         * If there's an error reading data, an error message is shown*/
         private void btnViewAllstudents_Click(object sender, EventArgs e)
         {
             try
@@ -87,7 +92,8 @@ namespace Student_Management_System_using_Windows_Forms_LLG.Presentation_Layer
                 MessageBox.Show($"Error displaying students: {ex.Message}");
             }
         }
-
+        /*Updates a student's information by validating inputs and creating a Student object with the updated details. 
+         * If the student exists, their information is updated in DataHandler, and the list refreshes.*/
         private void btnUpdateStudent_Click(object sender, EventArgs e)
         {
             try
@@ -138,6 +144,8 @@ namespace Student_Management_System_using_Windows_Forms_LLG.Presentation_Layer
             txtcourse.Clear();
         }
 
+       // Deletes a student based on the provided student ID.If the ID is valid and the student is found,
+       // they are removed from DataHandler, the list refreshes, and the input fields are cleared.
         private void btndelete_Click(object sender, EventArgs e)
         {
         
@@ -164,7 +172,8 @@ namespace Student_Management_System_using_Windows_Forms_LLG.Presentation_Layer
                 txtcourse.Clear();
             
         }
-
+      //  Generates a summary report of all students using DataHandler and displays it in a ListView(lstview).
+      //  If an error occurs, it shows an error message.
         private void btnGenerateReport_Click(object sender, EventArgs e)
         {
             try
