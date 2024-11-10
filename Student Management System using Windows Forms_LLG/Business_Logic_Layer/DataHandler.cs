@@ -27,34 +27,60 @@ namespace Student_Management_System_using_Windows_Forms_LLG.Business_Logic_Layer
 
         public bool UpdateStudent(Student updatedStudent)
         {
-            var student = studentList.Find(s => s.StudentID == updatedStudent.StudentID);
-            if (student != null)
+            bool studentFound = false;
+
+            for (int i = 0; i < studentList.Count; i++)
             {
-                student.Name = updatedStudent.Name;
-                student.Age = updatedStudent.Age;
-                student.Course = updatedStudent.Course;
-                fileHandler.WriteStudents(studentList);
-                return true;
+                if (studentList[i].StudentID == updatedStudent.StudentID)
+                {             
+                    studentList[i].Name = updatedStudent.Name;
+                    studentList[i].Age = updatedStudent.Age;
+                    studentList[i].Course = updatedStudent.Course;
+
+                    studentFound = true;
+                    break;
+                }
             }
-            return false;
+
+            if (studentFound)
+            {
+                fileHandler.WriteStudents(studentList);
+            }
+
+            return studentFound;
         }
 
-       
+
+
         public bool DeleteStudent(string studentID)
         {
-            MessageBox.Show($"Searching for StudentID: {studentID}"); 
-            var student = studentList.Find(s => s.StudentID == studentID);
-            if (student != null)
+            MessageBox.Show($"Searching for StudentID: {studentID}");
+            bool studentFound = false;
+
+            for (int i = 0; i < studentList.Count; i++)
             {
-                studentList.Remove(student);
+                if (studentList[i].StudentID == studentID)
+                {
+                    studentList.RemoveAt(i);
+                    studentFound = true;
+                    break;
+                }
+            }
+
+            if (studentFound)
+            {
                 fileHandler.WriteStudents(studentList);
                 return true;
             }
-            MessageBox.Show("Student not found in the list."); 
-            return false;
+            else
+            {
+                MessageBox.Show("Student not found in the list.");
+                return false;
+            }
         }
 
-    
+
+
         public List<Student> GetAllStudents()
         {
             return studentList;

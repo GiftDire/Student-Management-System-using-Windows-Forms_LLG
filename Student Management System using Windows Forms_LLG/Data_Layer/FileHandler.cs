@@ -41,7 +41,7 @@ namespace Student_Management_System_using_Windows_Forms_LLG.Data_Layer
                 }
                 else
                 {
-                    MessageBox.Show("Error: students.txt not found.");
+                    MessageBox.Show(".txt file not found");
                 }
             }
             catch (Exception ex)
@@ -78,7 +78,17 @@ namespace Student_Management_System_using_Windows_Forms_LLG.Data_Layer
             try
             {
                 int totalStudents = students.Count;
-                double averageAge = students.Count > 0 ? students.Average(s => s.Age) : 0;
+                double averageAge = 0;
+
+                if (totalStudents > 0)
+                {
+                    double totalAge = 0;
+                    foreach (var student in students)
+                    {
+                        totalAge += student.Age;
+                    }
+                    averageAge = totalAge / totalStudents;
+                }
 
                 using (StreamWriter writer = new StreamWriter(summaryFilePath, false))
                 {
@@ -92,6 +102,7 @@ namespace Student_Management_System_using_Windows_Forms_LLG.Data_Layer
             {
                 MessageBox.Show(ex.Message);
             }
+
         }
     }
 }
