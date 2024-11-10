@@ -43,8 +43,8 @@
             this.txtstudentage = new System.Windows.Forms.TextBox();
             this.txtcourse = new System.Windows.Forms.TextBox();
             this.dgvdisplay = new System.Windows.Forms.DataGridView();
-            this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
             this.label5 = new System.Windows.Forms.Label();
+            this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
             ((System.ComponentModel.ISupportInitialize)(this.dgvdisplay)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
             this.SuspendLayout();
@@ -59,7 +59,7 @@
             this.BtnAddStudent.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnAddStudent.ForeColor = System.Drawing.Color.White;
             this.BtnAddStudent.Location = new System.Drawing.Point(59, 361);
-            this.BtnAddStudent.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnAddStudent.Margin = new System.Windows.Forms.Padding(2);
             this.BtnAddStudent.Name = "BtnAddStudent";
             this.BtnAddStudent.Size = new System.Drawing.Size(108, 50);
             this.BtnAddStudent.TabIndex = 0;
@@ -75,8 +75,8 @@
             this.btnViewStudents.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnViewStudents.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.btnViewStudents.ForeColor = System.Drawing.Color.White;
-            this.btnViewStudents.Location = new System.Drawing.Point(230, 361);
-            this.btnViewStudents.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnViewStudents.Location = new System.Drawing.Point(231, 361);
+            this.btnViewStudents.Margin = new System.Windows.Forms.Padding(2);
             this.btnViewStudents.Name = "btnViewStudents";
             this.btnViewStudents.Size = new System.Drawing.Size(110, 50);
             this.btnViewStudents.TabIndex = 1;
@@ -92,7 +92,7 @@
             this.btnUpdateStudent.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.btnUpdateStudent.ForeColor = System.Drawing.Color.White;
             this.btnUpdateStudent.Location = new System.Drawing.Point(398, 361);
-            this.btnUpdateStudent.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnUpdateStudent.Margin = new System.Windows.Forms.Padding(2);
             this.btnUpdateStudent.Name = "btnUpdateStudent";
             this.btnUpdateStudent.Size = new System.Drawing.Size(136, 50);
             this.btnUpdateStudent.TabIndex = 2;
@@ -108,7 +108,7 @@
             this.btnDeleteStudent.ForeColor = System.Drawing.Color.White;
             this.btnDeleteStudent.Image = ((System.Drawing.Image)(resources.GetObject("btnDeleteStudent.Image")));
             this.btnDeleteStudent.Location = new System.Drawing.Point(589, 361);
-            this.btnDeleteStudent.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDeleteStudent.Margin = new System.Windows.Forms.Padding(2);
             this.btnDeleteStudent.Name = "btnDeleteStudent";
             this.btnDeleteStudent.Size = new System.Drawing.Size(86, 50);
             this.btnDeleteStudent.TabIndex = 3;
@@ -124,7 +124,7 @@
             this.btnGenerateReport.ForeColor = System.Drawing.Color.White;
             this.btnGenerateReport.Image = ((System.Drawing.Image)(resources.GetObject("btnGenerateReport.Image")));
             this.btnGenerateReport.Location = new System.Drawing.Point(712, 361);
-            this.btnGenerateReport.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnGenerateReport.Margin = new System.Windows.Forms.Padding(2);
             this.btnGenerateReport.Name = "btnGenerateReport";
             this.btnGenerateReport.Size = new System.Drawing.Size(134, 50);
             this.btnGenerateReport.TabIndex = 4;
@@ -189,7 +189,7 @@
             // txtstudentID
             // 
             this.txtstudentID.Location = new System.Drawing.Point(230, 140);
-            this.txtstudentID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtstudentID.Margin = new System.Windows.Forms.Padding(2);
             this.txtstudentID.Name = "txtstudentID";
             this.txtstudentID.Size = new System.Drawing.Size(215, 20);
             this.txtstudentID.TabIndex = 9;
@@ -198,7 +198,7 @@
             // txtstudentname
             // 
             this.txtstudentname.Location = new System.Drawing.Point(230, 192);
-            this.txtstudentname.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtstudentname.Margin = new System.Windows.Forms.Padding(2);
             this.txtstudentname.Name = "txtstudentname";
             this.txtstudentname.Size = new System.Drawing.Size(215, 20);
             this.txtstudentname.TabIndex = 10;
@@ -206,7 +206,7 @@
             // txtstudentage
             // 
             this.txtstudentage.Location = new System.Drawing.Point(230, 237);
-            this.txtstudentage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtstudentage.Margin = new System.Windows.Forms.Padding(2);
             this.txtstudentage.Name = "txtstudentage";
             this.txtstudentage.Size = new System.Drawing.Size(215, 20);
             this.txtstudentage.TabIndex = 11;
@@ -214,7 +214,7 @@
             // txtcourse
             // 
             this.txtcourse.Location = new System.Drawing.Point(230, 280);
-            this.txtcourse.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtcourse.Margin = new System.Windows.Forms.Padding(2);
             this.txtcourse.Name = "txtcourse";
             this.txtcourse.Size = new System.Drawing.Size(215, 20);
             this.txtcourse.TabIndex = 12;
@@ -223,22 +223,12 @@
             // 
             this.dgvdisplay.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvdisplay.Location = new System.Drawing.Point(502, 140);
-            this.dgvdisplay.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvdisplay.Margin = new System.Windows.Forms.Padding(2);
             this.dgvdisplay.Name = "dgvdisplay";
             this.dgvdisplay.RowHeadersWidth = 51;
             this.dgvdisplay.RowTemplate.Height = 24;
             this.dgvdisplay.Size = new System.Drawing.Size(344, 160);
             this.dgvdisplay.TabIndex = 13;
-            // 
-            // axWindowsMediaPlayer1
-            // 
-            this.axWindowsMediaPlayer1.Enabled = true;
-            this.axWindowsMediaPlayer1.Location = new System.Drawing.Point(-11, -1);
-            this.axWindowsMediaPlayer1.Name = "axWindowsMediaPlayer1";
-            this.axWindowsMediaPlayer1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer1.OcxState")));
-            this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(910, 508);
-            this.axWindowsMediaPlayer1.TabIndex = 14;
-            this.axWindowsMediaPlayer1.Enter += new System.EventHandler(this.axWindowsMediaPlayer1_Enter);
             // 
             // label5
             // 
@@ -256,6 +246,16 @@
             this.label5.Text = "STUDENT INFO FORM";
             this.label5.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.label5.Click += new System.EventHandler(this.label5_Click);
+            // 
+            // axWindowsMediaPlayer1
+            // 
+            this.axWindowsMediaPlayer1.Enabled = true;
+            this.axWindowsMediaPlayer1.Location = new System.Drawing.Point(-11, -1);
+            this.axWindowsMediaPlayer1.Name = "axWindowsMediaPlayer1";
+            this.axWindowsMediaPlayer1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer1.OcxState")));
+            this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(910, 508);
+            this.axWindowsMediaPlayer1.TabIndex = 14;
+            this.axWindowsMediaPlayer1.Enter += new System.EventHandler(this.axWindowsMediaPlayer1_Enter);
             // 
             // StudentForm
             // 
@@ -278,7 +278,7 @@
             this.Controls.Add(this.btnViewStudents);
             this.Controls.Add(this.BtnAddStudent);
             this.Controls.Add(this.axWindowsMediaPlayer1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "StudentForm";
             this.Text = "StudentForm";
             this.Activated += new System.EventHandler(this.StudentForm_Activated);
