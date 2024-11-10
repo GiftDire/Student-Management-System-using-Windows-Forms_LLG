@@ -136,7 +136,7 @@
             this.btnUpdateStudent.Font = new System.Drawing.Font("Palatino Linotype", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.btnUpdateStudent.Location = new System.Drawing.Point(481, 409);
             this.btnUpdateStudent.Name = "btnUpdateStudent";
-            this.btnUpdateStudent.Size = new System.Drawing.Size(108, 41);
+            this.btnUpdateStudent.Size = new System.Drawing.Size(127, 41);
             this.btnUpdateStudent.TabIndex = 11;
             this.btnUpdateStudent.Text = "Update";
             this.btnUpdateStudent.UseVisualStyleBackColor = true;
