@@ -62,8 +62,7 @@ namespace Student_Management_System_using_Windows_Forms_LLG.Presentation_Layer
 
             var newStudent = new Student(txtstudentID.Text, txtstudentname.Text, age, txtcourse.Text);
             dataHandler.AddStudent(newStudent);
-            RefreshStudentList();
-            MessageBox.Show("New student has been added.");
+          
 
             txtstudentID.Clear();
             txtstudentname.Clear();
@@ -188,6 +187,11 @@ namespace Student_Management_System_using_Windows_Forms_LLG.Presentation_Layer
         }
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtstudentID_TextChanged(object sender, EventArgs e)
         {
 
         }

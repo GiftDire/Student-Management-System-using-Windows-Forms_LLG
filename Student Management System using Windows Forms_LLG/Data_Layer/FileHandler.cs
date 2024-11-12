@@ -14,8 +14,8 @@ namespace Student_Management_System_using_Windows_Forms_LLG.Data_Layer
 
     class FileHandler
     {
-       public string studentFilePath = @"C:\Users\direo\OneDrive\Desktop\Students.txt";
-       public  string summaryFilePath = @"C:\Users\direo\OneDrive\Desktop\Summary.txt";
+       public string studentFilePath = @"C:\Users\direo\OneDrive\Desktop\Prgstudents.txt";
+       public  string summaryFilePath = @"C:\Users\direo\OneDrive\Desktop\Prgsummary.txt";
 
         //The method down beloow read studenttextfile using the streamreader it then formats the values to fit into the Datagrid.
         //The ReadStudents method reads student data from a file and returns a list of Student objects
@@ -30,7 +30,7 @@ namespace Student_Management_System_using_Windows_Forms_LLG.Data_Layer
                     using (StreamReader reader = new StreamReader(studentFilePath))
                     {
                         string line;
-                        while ((line = reader.ReadLine()) != null)
+                        while ((line = reader.ReadLine()) != null)//when there isnt anything in the txtfile
                         {
                             if (string.IsNullOrWhiteSpace(line))
                                 continue;

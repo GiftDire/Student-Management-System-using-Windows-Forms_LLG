@@ -95,6 +95,7 @@
             this.txtstudentID.Name = "txtstudentID";
             this.txtstudentID.Size = new System.Drawing.Size(154, 22);
             this.txtstudentID.TabIndex = 5;
+            this.txtstudentID.TextChanged += new System.EventHandler(this.txtstudentID_TextChanged);
             // 
             // txtstudentname
             // 
@@ -170,9 +171,9 @@
             // 
             this.btnGenerateReport.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnGenerateReport.Font = new System.Drawing.Font("Palatino Linotype", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.btnGenerateReport.Location = new System.Drawing.Point(860, 413);
+            this.btnGenerateReport.Location = new System.Drawing.Point(846, 408);
             this.btnGenerateReport.Name = "btnGenerateReport";
-            this.btnGenerateReport.Size = new System.Drawing.Size(242, 37);
+            this.btnGenerateReport.Size = new System.Drawing.Size(234, 42);
             this.btnGenerateReport.TabIndex = 14;
             this.btnGenerateReport.Text = "GenerateSummarry";
             this.btnGenerateReport.UseVisualStyleBackColor = true;

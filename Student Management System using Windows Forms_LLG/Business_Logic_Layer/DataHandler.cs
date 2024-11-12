@@ -16,7 +16,7 @@ namespace Student_Management_System_using_Windows_Forms_LLG.Business_Logic_Layer
     
     class DataHandler
     {
-        FileHandler fileHandler = new FileHandler();
+        FileHandler fileHandler = new FileHandler();//
         List<Student> studentList;
         // Constructor for DataHandler class
         // This constructor initializes the studentList by reading the student data from the file via FileHandler.
@@ -27,10 +27,23 @@ namespace Student_Management_System_using_Windows_Forms_LLG.Business_Logic_Layer
         // Adds a new student to the studentList and then writes the updated list back to the file using FileHandler.
         public void AddStudent(Student student)
         {
-            studentList.Add(student);
-            fileHandler.WriteStudents(studentList);
-        }
+            
+            studentList = fileHandler.ReadStudents();
+            bool studentExists = studentList.Exists(s => s.StudentID == student.StudentID);
 
+            if (studentExists)
+            {
+                MessageBox.Show("Student with this ID already exists.");
+            }
+            else
+            {
+               
+                studentList.Add(student);
+                fileHandler.WriteStudents(studentList);
+
+                MessageBox.Show("Student added successfully.");
+            }
+        }
         // Updates the details of an existing student in the studentList based on their StudentID.
         // Returns true if the student is found and updated, otherwise returns false.
         public bool UpdateStudent(Student updatedStudent)
