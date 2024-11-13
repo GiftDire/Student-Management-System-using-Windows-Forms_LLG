@@ -198,3 +198,5 @@ namespace Student_Management_System_using_Windows_Forms_LLG.Presentation_Layer
     }
     
 }
+//when updaating the use must make use of the Grid
+//and when deleting the student the user must validate weather they are sure if the want to delete

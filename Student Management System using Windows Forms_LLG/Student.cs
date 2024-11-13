@@ -10,7 +10,6 @@ namespace Student_Management_System_using_Windows_Forms_LLG
     public class Student
     {
         public string StudentID { get;set; }
-
         public string Name { get;set; }
         public int Age { get;set; }
         public string Course { get;set; }
